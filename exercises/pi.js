@@ -1,3 +1,3 @@
-const pi = 3.14159
+const pi = 3.14159;
 
-console.log("PI", pi)
+console.log("PI", pi);

@@ -1,4 +1,4 @@
-const numberOne = 10, numberTwo = 10
+const numberOne = 10,
+  numberTwo = 10;
 
-console.log("Sum:", numberOne + numberTwo)
-
+console.log("Sum:", numberOne + numberTwo);
