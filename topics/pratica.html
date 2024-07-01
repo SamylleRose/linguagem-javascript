@@ -1,0 +1,47 @@
+<!-- 1) Crie um campo <input type="text"> e aplique os seguintes controles com base nos 
+eventos abaixo:
+• No evento de foco modifique o background do input para amarelo.
+• Quando o campo perder o foco, recupere o seu respectivo valor e:
+o Caso o conteúdo contido no campo tenha menos de 3 caracteres o mesmo 
+deve ter seu background alterado para vermelho.
+o Caso o conteúdo contido no campo tenha 3 caracteres ou mais o background 
+deve ser alterado para verde. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="Input" placeholder="Digite algo..." />
+  </body>
+
+  <script>
+    function modifica(color) {
+      document.getElementById("Input").style.backgroundColor = color;
+    }
+
+    const inputElement = document.getElementById("Input");
+    const originalStyle = inputElement.style.backgroundColor;
+
+    inputElement.addEventListener("focus", function () {
+      modifica("#FFFF00");
+    });
+
+    inputElement.addEventListener("blur", function () {
+      modifica(originalStyle);
+    });
+
+    inputElement.addEventListener("input", function () {
+      let caracter = inputElement.value;
+      let tamanho = caracter.length;
+      if (tamanho < 3) {
+        modifica("#FF0000");
+      } else {
+        modifica("#008000");
+      }
+    });
+  </script>
+</html>

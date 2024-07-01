@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evento onclick</title>
+  </head>
+  <body>
+    <button onclick="onclickMensagem()">Clique em mim</button>
+    <button ondblclick="ondblclickMensagem()">Clique duplo em mim</button>
+
+    <button onmouseup="onmouseupMensagem()">Solte o mouse aqui</button>
+    <p onmouseover="onmouseoverMensagem()">Passe o mouse sobre mim</p>
+    <p onmouseover="mudarCor(this)" onmouseout="restaurarCor(this)">
+      Passe o mouse sobre mim
+    </p>
+    <script>
+      function onclickMensagem() {
+        alert("Você clicou no botão!");
+      }
+      function ondblclickMensagem() {
+        alert("Você clicou duplamente no botão!");
+      }
+      function onmouseupMensagem() {
+        alert("Você soltou o botão do mouse!");
+      }
+
+      function onmouseoverMensagem() {
+        alert("Você passou o mouse sobre o parágrafo!");
+      }
+
+      function mudarCor(elemento) {
+        elemento.style.color = "red";
+      }
+
+      function restaurarCor(elemento) {
+        elemento.style.color = "black";
+      }
+    </script>
+  </body>
+</html>
